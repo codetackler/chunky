@@ -1,7 +1,7 @@
 pipeline {
   agent any
   triggers {
-    upstream(upstreamProjects: "junky/master,jinky/master")
+    fanin(upstreamProjects: "junky/master,jinky/master")
   }
   parameters {
     extendedChoice(
